@@ -1,0 +1,37 @@
+{
+  "name": "hmm-mas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HMM-MAS — hierarchical memory architecture for teams of AI agents, as a labeled property graph with an inspectable operator UI.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build:web && npm run build:server",
+    "build:web": "vite build",
+    "build:server": "node scripts/build-server.mjs",
+    "start": "node dist/server.mjs",
+    "test": "tsx scripts/test-consolidation.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}
